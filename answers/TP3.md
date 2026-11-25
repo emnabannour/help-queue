@@ -14,8 +14,8 @@ replaced by the value 'waiting' when the query runs (it is a bound parameter).
 
 ## Exercise 3
 
-**Question 3.** [6] people are ahead of me. This matches the Waiting section of the
-queue: I am at position [7], so [6] people are before me.
+**Question 3.** 6 people are ahead of me. This matches the Waiting section of the
+queue: I am at position 7, so 6 people are before me.
 
 ## Exercise 4
 
@@ -32,11 +32,11 @@ relationship and returns a `Topic` object. When Blade prints a whole model with
 
 ## Exercise 6
 
-**Question 6.** The topic [database] has [2] tickets.
+**Question 6.** The topic database has 2 tickets.
 
 ## Exercise 7
 
-**Question 7.** The list contains [X] items (the waiting tickets). The topic object
+**Question 7.** The list contains 9 items (the waiting tickets). The topic object
 of each item contains `id`, `name`, `created_at` and `updated_at`. A mobile app,
 a JavaScript front-end, a display screen in the classroom or a Python script could
 use this data.

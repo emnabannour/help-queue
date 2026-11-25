@@ -8,11 +8,22 @@ use Illuminate\Validation\Rule;
 
 class TicketController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $tickets = Ticket::orderBy('created_at')->get();
+        $topic = $request->query('topic');
 
-        return view('tickets.index', ['tickets' => $tickets]);
+        $query = Ticket::orderBy('created_at');
+
+        if ($topic) {
+            $query->where('topic', $topic);
+        }
+
+        $tickets = $query->get();
+
+        return view('tickets.index', [
+            'tickets' => $tickets,
+            'topics' => Ticket::TOPICS,
+        ]);
     }
 
     public function show(Ticket $ticket)
@@ -37,6 +48,7 @@ class TicketController extends Controller
 
         return redirect()->route('tickets.index')->with('message', 'You are in the queue!');
     }
+
     public function destroy(Ticket $ticket)
     {
         $ticket->delete();

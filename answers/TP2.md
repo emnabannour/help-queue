@@ -83,3 +83,8 @@ application in the user's name). Without it, Laravel answers 419 Page Expired.
 **3.** Because the user can modify the HTML or send a request without using the form
 at all. The form's limits are only for comfort; only the server can really check
 the data before saving it to the database.
+## Bonus
+
+`/tickets?topic=Git` shows only the Git tickets: the controller reads the topic with
+`$request->query('topic')` and filters with `where('topic', ...)`. The view shows one
+link per topic (and an "All" link) above the list.

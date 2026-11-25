@@ -32,7 +32,7 @@ relationship and returns a `Topic` object. When Blade prints a whole model with
 
 ## Exercise 6
 
-**Question 6.** The topic [name] has [X] tickets.
+**Question 6.** The topic [database] has [2] tickets.
 
 ## Exercise 7
 

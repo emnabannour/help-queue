@@ -42,9 +42,9 @@ a JavaScript front-end, a display screen in the classroom or a Python script cou
 use this data.
 
 ## Exercise 8
-
-**Question 8.** [Yes, my neighbour's project started by following the README. /
-No, the step ... was missing.]
+**Question 8.** I did not have a neighbour to swap with, so I tested my own README:
+I cloned my repository into a new folder (neighbour-queue) and followed the README
+step by step. The project started correctly and showed the queue with 8 tickets.
 
 ## Final questions
 

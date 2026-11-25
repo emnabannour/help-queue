@@ -14,8 +14,8 @@ replaced by the value 'waiting' when the query runs (it is a bound parameter).
 
 ## Exercise 3
 
-**Question 3.** [X] people are ahead of me. This matches the Waiting section of the
-queue: I am at position [X + 1], so [X] people are before me.
+**Question 3.** [6] people are ahead of me. This matches the Waiting section of the
+queue: I am at position [7], so [6] people are before me.
 
 ## Exercise 4
 

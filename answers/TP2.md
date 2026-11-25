@@ -8,7 +8,8 @@ uses `fake()`, which generates random values (names, topics, sentences) on every
 
 ## Exercise 2
 
-**Question 2.** I get a 404 (Not Found) page. The ticket is looked up automatically by route model binding: because the route has `{ticket}` and the `show` method
+**Question 2.** I get a 404 (Not Found) page. The ticket is looked up automatically 
+by route model binding: because the route has `{ticket}` and the `show` method
 has the parameter `Ticket $ticket`, Laravel searches for the ticket with id 999 in
 the database. It does not exist, so Laravel answers 404.
 

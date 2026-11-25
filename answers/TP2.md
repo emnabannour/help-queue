@@ -26,7 +26,6 @@ The `create` route below was never reached.
 protects against CSRF attacks (Cross-Site Request Forgery): another website
 trying to submit a form to our application using the visitor's browser and session.
 Laravel refuses every POST/DELETE request that does not contain the right token.
-
 ## Exercise 5
 
 Messages shown:

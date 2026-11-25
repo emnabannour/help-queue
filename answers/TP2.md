@@ -55,7 +55,13 @@ sure no invalid data reaches the database.
 
 **7.1 – route:list before Route::resource:**
 
-(paste here the result of `php artisan route:list --path=tickets`)
+
+  GET|HEAD   tickets .......................................................... tickets.index › TicketController@index
+  POST       tickets .......................................................... tickets.store › TicketController@store
+  GET|HEAD   tickets/create ................................................. tickets.create › TicketController@create
+  GET|HEAD   tickets/{ticket} ................................................... tickets.show › TicketController@show
+  DELETE     tickets/{ticket} ............................................. tickets.destroy › TicketController@destroy
+
 
 **Question 8.** The result is the same: the same 5 routes, with the same URLs,
 HTTP methods, names (`tickets.index`, `tickets.show`...) and controller methods.

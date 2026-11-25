@@ -8,21 +8,12 @@ use Illuminate\Validation\Rule;
 
 class TicketController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $topic = $request->query('topic');
-
-        $query = Ticket::orderBy('created_at');
-
-        if ($topic) {
-            $query->where('topic', $topic);
-        }
-
-        $tickets = $query->get();
-
         return view('tickets.index', [
-            'tickets' => $tickets,
-            'topics' => Ticket::TOPICS,
+            'helping' => Ticket::helping()->get(),
+            'waiting' => Ticket::waiting()->get(),
+            'doneCount' => Ticket::where('status', 'done')->count(),
         ]);
     }
 
@@ -48,6 +39,7 @@ class TicketController extends Controller
 
         return redirect()->route('tickets.index')->with('message', 'You are in the queue!');
     }
+
     public function update(Request $request, Ticket $ticket)
     {
         $validated = $request->validate([
@@ -59,6 +51,7 @@ class TicketController extends Controller
 
         return redirect()->route('tickets.show', $ticket)->with('message', 'Status updated.');
     }
+
     public function destroy(Ticket $ticket)
     {
         $ticket->delete();
@@ -66,4 +59,3 @@ class TicketController extends Controller
         return redirect()->route('tickets.index')->with('message', 'Ticket removed.');
     }
 }
-
